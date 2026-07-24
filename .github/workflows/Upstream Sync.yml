@@ -16,7 +16,7 @@ jobs:
 
         steps:
             - name: Checkout target repo
-              uses: actions/checkout@v6.2.0
+              uses: actions/checkout@v6
 
             - name: Sync Upstream
               uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.3
