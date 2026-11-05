@@ -186,10 +186,13 @@ uv run main.py --platform xhs --type detail --specified_id <帖子URL或ID> --ge
 data/xhs/media/{帖子ID}/
 ├── cover.jpg     # 封面
 ├── video.mp4     # 视频（B站为 DASH 合流产物）
-└── 001.jpg       # 图文帖的图片
+├── 001.jpg       # 图文帖的图片
+└── 001_live.mp4  # 对应图片的实况随附视频（有实况时）
 ```
 
 **支持平台**：小红书、抖音、快手、B站、微博。贴吧与知乎的数据结构中没有媒体字段，暂不支持。
+
+**实况照片（Live Photo）**：抖音和小红书统一由 `config/base_config.py` 中的 `DOWNLOAD_LIVE_PHOTO` 控制，默认 `True`，仅在 `ENABLE_GET_MEDIA` 开启时生效。设为 `False` 后只保存静态图，普通视频下载不受影响。实况视频与静态图使用相同的原始图片序号（如 `001.jpg` / `001_live.mp4`），缺失媒体时保留序号空位。这里保存的是独立图片与随附视频，不合成手机相册的 Live Photo，也不转换为 GIF。小红书 Web 返回的实况视频可能自带水印，下载会保留该视频的原始内容。
 
 **关于 B 站**：
 - 安装 [ffmpeg](https://ffmpeg.org/) 后可走 DASH 路径获取最高画质（音视频分轨下载后无损合流）；未安装时自动降级为 mp4 直链，产物名为 `video-durl.mp4` 以便区分
@@ -350,22 +353,6 @@ MediaCrawler 支持多种数据存储方式，包括 CSV、JSON、JSONL、Excel�
       </td>
       <td valign="middle">
         <a href="https://go.nodemaven.com/MediaCrawleroctober">NodeMaven</a> 是面向网页抓取和自动化场景的高效代理服务商，提供市面上最高质量的 IP。主要优势包括 99.9% 可用性、ZIP 邮编定位、IP 过滤（所有代理的欺诈评分均低于 97%）、无需 KYC，以及代理带宽检测器、Meta 标签检测器、IP 查询等独家免费工具。MediaCrawler 用户使用优惠码 <code>CRAWLER35</code> 可享移动和住宅代理 35% 折扣，使用 <code>CRAWLER40</code> 可享 ISP（静态）代理 40% 折扣。👉 <a href="https://go.nodemaven.com/MediaCrawleroctober">访问 NodeMaven</a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://www.openlux.ai/register?channel=c_drxir46c"><img src="docs/static/images/openlux_logo.png" width="160" alt="OpenLux"></a>
-      </td>
-      <td valign="middle">
-        感谢 <a href="https://www.openlux.ai/register?channel=c_drxir46c">OpenLux</a> 对本项目的赞助！OpenLux 是一个面向企业的一站式 AI 聚合平台，汇集全球各大厂商主流大模型，平台提供高效、稳定的服务与及时的技术支持。Claude、OpenAI、Gemini 系列模型基准折扣分别低至官方的 0.882 折、0.4 折和 0.8 折。MediaCrawler 用户还可享受专属福利：通过<a href="https://www.openlux.ai/register?channel=c_drxir46c">专属链接注册</a>，充值最高可享 7.5% 优惠！👉 <a href="https://www.openlux.ai/register?channel=c_drxir46c">立即体验</a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://sx.org/c/CRAWLER3G"><img src="docs/static/images/sx_logo.png" width="180" alt="SX.ORG"></a>
-      </td>
-      <td valign="middle">
-        <a href="https://sx.org/c/CRAWLER3G">SX.ORG</a> 是专为高频数据采集与反爬对抗打造的高性能代理网络，完美适配 MediaCrawler 等多平台抓取工具。核心优势包括全球 190+ 地区真实住宅 IP 池、99.9% 稳定连通率、精准国家/城市及 ASN 运营商定位、全面支持 HTTP(S) 与 SOCKS5 协议，以及针对社交媒体风控优化的智能会话轮换。MediaCrawler 用户使用专属优惠码 <code>CRAWLER3G</code> 注册即可免费领取 <strong>3GB</strong> 优质测试流量。👉 <a href="https://sx.org/c/CRAWLER3G">访问 SX.ORG 领取 3GB 流量</a>
       </td>
     </tr>
     <tr>
