@@ -69,7 +69,7 @@
 | 数据结构覆盖 | 搜索 / 帖子详情 / 评论 / 创作者 | 额外支持**首页信息流（HomeFeed）**与**热搜榜单** |
 | AI Agent 与扩展项目 | — | 内置 **AI Agent Skill** + **多套 AI Agent / 全栈桌面端项目源码** |
 
-👉 开源不易，欢迎订阅支持：**[查看 MediaCrawlerPro 项目主页](https://github.com/MediaCrawlerPro)** ｜ **[查看订阅方式](https://nanmicoder.github.io/MediaCrawler/mediacrawlerpro%E8%AE%A2%E9%98%85.html)**
+👉 开源不易，欢迎订阅支持：**[查看 MediaCrawlerPro 项目主页与订阅方式](https://github.com/MediaCrawlerPro)**
 
 <details>
 <summary>📦 <b>点击展开：查看 Pro 版详细特性与附赠 AI Agent 项目源码清单</b></summary>
@@ -273,15 +273,6 @@ MediaCrawler 支持 CSV、JSON、JSONL、Excel、SQLite 和 MySQL 等多种存�
       </td>
       <td valign="middle">
         <a href="https://go.nodemaven.com/MediaCrawleroctober">NodeMaven</a> 是面向网页抓取和自动化场景的高效代理服务商，提供市面上最高质量的 IP。主要优势包括 99.9% 可用性、ZIP 邮编定位、IP 过滤（所有代理的欺诈评分均低于 97%）、无需 KYC，以及代理带宽检测器、Meta 标签检测器、IP 查询等独家免费工具。MediaCrawler 用户使用优惠码 <code>CRAWLER35</code> 可享移动和住宅代理 35% 折扣，使用 <code>CRAWLER40</code> 可享 ISP（静态）代理 40% 折扣。黑五期间，使用优惠码 <code>CRAWLER2X</code> 可获得双倍流量。👉 <a href="https://go.nodemaven.com/MediaCrawleroctober">访问 NodeMaven</a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://dragtokens.com"><img src="docs/static/images/dragtokens_logo.jpg" width="180" alt="DragTokens"></a>
-      </td>
-      <td valign="middle">
-        感谢 <a href="https://dragtokens.com">DragTokens（Drag API）</a> 对本项目的赞助！DragTokens 专注于为开发者提供多模型 API 中转服务，支持 Claude Code、Codex、Gemini CLI 等 AI 编程工具，覆盖 GPT、Claude、Gemini 等主流模型。Claude 官方客户端专用分组倍率低至 1.1×（对比官方 API 约 1.55 折，节省约 84.5%）、Codex 倍率低至 0.3×（约 0.42 折，节省约 96%）、Gemini 倍率低至 0.25×（约 0.35 折，节省约 96.5%），号池峰值 TPM 达 7 亿。<br><br>
-        🎁 通过 <a href="https://dragtokens.com">专属链接</a>注册的新用户即送赠金，单次充值满 100 元还可享受 10% 返现！配套新手入门、工具配置及 API 示例文档，接入有教程，使用有指引。不存储您的提示词与模型回复，并为企业及高校团队提供专属账户池、对公转账与开票支持。
       </td>
     </tr>
     <tr>
